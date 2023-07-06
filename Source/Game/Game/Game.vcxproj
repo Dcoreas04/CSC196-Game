@@ -75,8 +75,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IntDir>$(SolutionDir)Temp\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\Bin\$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(TempDir)</IntDir>
+    <OutDir>$(BinDir)</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -147,7 +147,7 @@
       <Project>{ba0b9e83-8f5b-412a-bcca-1af58768f0f1}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Engine\Renderer\Renderer.vcxproj">
-      <Project>{37f3e71f-0af0-4c4e-9662-c0d6d745a70c}</Project>
+      <Project>{586c4b4c-0b65-4517-9135-d83e60a178ab}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

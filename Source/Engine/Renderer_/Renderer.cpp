@@ -40,6 +40,6 @@ namespace kiko
 	}
 	void Renderer::DrawPoint(int x, int y)
 	{
-		SDL_RenderDrawPoint(m_renderer, x, y);
+		SDL_RenderDrawLine(m_renderer, x, y);
 	}
 }

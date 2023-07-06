@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{37f3e71f-0af0-4c4e-9662-c0d6d745a70c}</ProjectGuid>
+    <ProjectGuid>{586c4b4c-0b65-4517-9135-d83e60a178ab}</ProjectGuid>
     <RootNamespace>Renderer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -74,6 +74,26 @@
     <Import Project="..\..\PropertySheets\Common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(BinDir)</OutDir>
+    <IntDir>$(TempDir)</IntDir>
+    <IncludePath>$(GameDir);$(EngineDir);$(ThirdPartyDir)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(BinDir)</OutDir>
+    <IntDir>$(TempDir)</IntDir>
+    <IncludePath>$(GameDir);$(EngineDir);$(ThirdPartyDir)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(BinDir)</OutDir>
+    <IntDir>$(TempDir)</IntDir>
+    <IncludePath>$(GameDir);$(EngineDir);$(ThirdPartyDir)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(BinDir)</OutDir>
+    <IntDir>$(TempDir)</IntDir>
+    <IncludePath>$(GameDir);$(EngineDir);$(ThirdPartyDir)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -86,6 +106,15 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>xcopy "$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -103,6 +132,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>xcopy "$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -116,6 +154,15 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>xcopy "$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -133,6 +180,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>xcopy "$(ThirdPartyDir)SDL2-2.28.0\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Renderer.cpp" />

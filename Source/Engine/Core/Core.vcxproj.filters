@@ -27,7 +27,7 @@
     <ClCompile Include="Memory.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\Time.cpp">
+    <ClCompile Include="Time.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

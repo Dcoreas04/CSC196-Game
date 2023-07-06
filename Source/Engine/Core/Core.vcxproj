@@ -25,9 +25,9 @@
     <ClInclude Include="Random.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\Time.cpp" />
     <ClCompile Include="FileIO.cpp" />
     <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
