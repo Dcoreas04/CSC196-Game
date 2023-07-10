@@ -18,6 +18,7 @@ namespace kiko
 		void SetColor(int r, int g, int b, int a);
 		void DrawLine(int x1, int y1, int x2, int y2);
 		void DrawPoint(int x, int y);
+		void DrawPoint(float x, float y);
 
 		int GetWidth() const { return m_width; }
 		int GetHeight() const { return m_height; }

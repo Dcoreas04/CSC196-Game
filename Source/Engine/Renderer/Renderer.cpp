@@ -42,4 +42,8 @@ namespace kiko
 	{
 		SDL_RenderDrawPoint(m_renderer, x, y);
 	}
+	void Renderer::DrawPoint(float x, float y)
+	{
+		SDL_RenderDrawPointF(m_renderer, x, y);
+	}
 }
