@@ -16,13 +16,25 @@
     <ClInclude Include="Memory.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\Time.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Vector2.h">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Core.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
       <Filter>Source</Filter>
     </ClInclude>
   </ItemGroup>
@@ -34,6 +46,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Time.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

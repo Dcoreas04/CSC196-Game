@@ -3,33 +3,33 @@
 
 namespace kiko 
 {
-	void seedRandom(unsigned int seed){
+	inline void seedRandom(unsigned int seed){
 		srand(seed);
 	}
 
-	 int random() {
+	inline int random() {
 		return rand();
 	}
 
-	 int random(unsigned int max) {
+	 inline int random(unsigned int max) {
 		// 0 - (max + 1)
 		return rand() & max;
 	}
 
-	 int random(unsigned int min, unsigned int max) {
+	 inline int random(unsigned int min, unsigned int max) {
 		// min - max
 		 return min + random(max - min);
 	 }
 
-	 float randomF() {
+	 inline float randomF() {
 		 return random() / (float)RAND_MAX;
 	}
 	
-	 float randomF(float max) {
+	 inline float randomF(float max) {
 		 return randomF() * max;
 	 }
 
-	 float randomF(float max, float min) {
+	 inline float randomF(float max, float min) {
 		 return min + randomF() * (max - min);
 	 }
 }
